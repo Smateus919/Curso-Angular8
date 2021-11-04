@@ -1,0 +1,5 @@
+<h1>Titulo: {{product.title}}</h1>
+<img [src]="product.image">
+<p>{{product.price | currency}}</p>
+<button (click)='addCart()' mat-raised-button color="primary">Añadir al carrito</button>
+<button [routerLink]="['/products', product.id]" mat-stroked-button>Ver detalle</button>

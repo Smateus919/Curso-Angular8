@@ -9,3 +9,5 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // nos hará breakpoints cada 300px
     
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

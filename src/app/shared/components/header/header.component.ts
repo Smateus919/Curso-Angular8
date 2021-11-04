@@ -9,7 +9,15 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  cartCounterNumber: number = 0
+
   ngOnInit(): void {
+
+  }
+
+  cartCounter(){
+    this.cartCounterNumber++
+    console.log(this.cartCounterNumber)
   }
 
 }
