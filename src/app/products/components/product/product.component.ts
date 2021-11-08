@@ -14,12 +14,17 @@ export class ProductComponent implements OnInit {
 
     @Output() numId: EventEmitter<any> = new EventEmitter;
 
+    cartCounterNumber: number = 0
+    @Output() numProdCart: EventEmitter<any> = new EventEmitter;
+
     ngOnInit(): void {
     }
 
     addCart(){
+        this.cartCounterNumber++
         console.log('Añadido al carrito')
         this.numId.emit(this.product.id)
+        this.numProdCart.emit( this.cartCounterNumber)
     }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -15,9 +15,14 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  cartCounter(){
-    this.cartCounterNumber++
+  addCart(cant){
+    this.cartCounterNumber = cant
     console.log(this.cartCounterNumber)
+
+  }
+
+  seeId(id){
+    console.log('Producto numero', id)
   }
 
 }

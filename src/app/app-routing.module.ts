@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/components/contact/contact.component
 import { DemoComponent } from './demo/demo.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { LayoutComponent } from './layout/layout.component'
+import { AdminModule } from './admin/admin.module'
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'demo',
     component: DemoComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: ()=> import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
     path: '**',
