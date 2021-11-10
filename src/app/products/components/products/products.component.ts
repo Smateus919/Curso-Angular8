@@ -15,9 +15,16 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.fetchProducts()
   }
 
-  products: Product[] = []
+  products: Product[] = [{
+    id: '1',
+    image: 'assets/images/camiseta.png',
+    title: 'Camiseta',
+    price: 80000,
+    description: 'bla bla bla bla bla'
+  }]
 
   seeId(id){
     console.log('Producto numero', id)
@@ -27,6 +34,22 @@ export class ProductsComponent implements OnInit {
     this.productsService.getAllProducts()
     .subscribe(products => {
       this.products = products
+    })
+  }
+
+  createProduct(){
+    console.log('hola')
+    const newProduct : Product = {
+      id: '7',
+      image: 'assets/images/mug.png',
+      title: 'mug-copia',
+      price: 95000,
+      description: 'new product by Sebastian Mateus'
+    }
+
+    this.productsService.createProduct(newProduct)
+    .subscribe(prod => {
+      console.log(prod)
     })
   }
 

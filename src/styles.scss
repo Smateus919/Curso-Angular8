@@ -4,14 +4,17 @@ body {
     padding: 0px;
   }
   
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // nos hará breakpoints cada 300px
-    
-  }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // nos hará breakpoints cada 300px
+  grid-gap: 50px 20px;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .text-align-center{
   text-align: center;
+}
+.full-width-table {
+  width: 100%;
 }
