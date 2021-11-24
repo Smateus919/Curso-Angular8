@@ -3,6 +3,7 @@ import { Params, ActivatedRoute } from '@angular/router'
 import { Product } from '../../../product.model';
 import { ProductsService } from '../../../core/Service//product/products.service'
 
+import { MaterialModule } from '../../../material/material.module'
 
 @Component({
   selector: 'app-detail-product',

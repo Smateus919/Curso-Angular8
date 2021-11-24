@@ -29,19 +29,12 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-4 center-xs">
-                <ul>
-                    <h3>Contactanos</h3>
-                    <li>
-                        <a routerLink="">Facebook</a>
-                    </li> 
-                    <li>
-                        <a routerLink="">Youtube</a>
-                    </li>
-                    <li>
-                        <a routerLink="">Correo electronico</a>
-                    </li>
-                </ul>
+            <div class="col-xs-12 col-md-4 center-xs">               
+                <h3>Contactanos</h3>
+                <mat-form-field>
+                    <input matInput placeholder="Correo Electronico" [formControl]="emailField" type="text">
+                </mat-form-field>
+                <button *ngIf="emailField.valid">Enviar</button>
             </div>
         </div>
     </div>
