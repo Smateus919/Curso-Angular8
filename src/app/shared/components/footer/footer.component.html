@@ -1,0 +1,41 @@
+<footer>
+    <div class="container">
+        <div class="row center-xs">
+            <div class="col-xs-12 col-md-4 center-xs">
+                <ul>
+                    <h3>Nosotros</h3>
+                    <li>
+                        <a routerLink="">Quienes somos</a>
+                    </li>
+                    <li>
+                        <a routerLink="">Nuestra Historia</a>
+                    </li>
+                    <li>
+                        <a routerLink="">Equipo de trabajo</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-4 center-xs">
+                <ul>
+                    <h3>Productos</h3>
+                    <li>
+                        <a routerLink="">Nuevos Productos</a>
+                    </li> 
+                    <li>
+                        <a routerLink="">Los Mas Vendidos</a>
+                    </li>
+                    <li>
+                        <a routerLink="">Mas Populares</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-4 center-xs">               
+                <h3>Contactanos</h3>
+                <mat-form-field>
+                    <input matInput placeholder="Correo Electronico" [formControl]="emailField" type="text">
+                </mat-form-field>
+                <button *ngIf="emailField.valid">Enviar</button>
+            </div>
+        </div>
+    </div>
+</footer>
