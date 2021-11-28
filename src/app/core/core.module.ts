@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProductsService } from './Service/product/products.service'
+import { ProductsService } from './services/product/products.service'
 
 @NgModule({
   declarations: [],

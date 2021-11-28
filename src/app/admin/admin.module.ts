@@ -11,10 +11,14 @@ import { ListProductComponent } from './components/list-product/list-product.com
 import { NavComponent } from './components/nav/nav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 
 @NgModule({
-  declarations: [ProductFormComponent, ListProductComponent, NavComponent, DashboardComponent, OrderListComponent],
+  declarations: [ProductFormComponent, ListProductComponent, NavComponent, DashboardComponent, OrderListComponent, FormProductComponent, LoginComponent, RegisterComponent, ProductEditComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

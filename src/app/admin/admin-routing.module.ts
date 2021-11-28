@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProductFormComponent } from './components/product-form/product-form.component'
 import { NavComponent } from './components/nav/nav.component'
 import { ListProductComponent } from './components/list-product/list-product.component'
 import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { OrderListComponent } from './components/order-list/order-list.component'
+import { FormProductComponent } from './components/form-product/form-product.component'
+import { LoginComponent } from './components/login/login.component'
+import { RegisterComponent } from './components/register/register.component'
+import { ProductEditComponent } from './components/product-edit/product-edit.component'
 
 const routes: Routes = [
   {
@@ -13,23 +16,35 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {
-        path: 'create',
-        component: ProductFormComponent
+        path: '',
+        component: DashboardComponent
       },
       {
-        path: 'list',
+        path: 'products',
         component: ListProductComponent
       },
       {
-        path: 'dashboard',
-        component: DashboardComponent
+        path: 'products/create',
+        component: FormProductComponent
       },
       {
         path: 'order-list',
         component: OrderListComponent
+      },
+      {
+        path: 'products/edit/:id',
+        component: ProductEditComponent
       }
     ]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },  
+  {
+    path: 'register',
+    component: RegisterComponent
+  }  
 ];
 
 @NgModule({
